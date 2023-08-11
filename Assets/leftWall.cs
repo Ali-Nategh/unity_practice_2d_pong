@@ -2,15 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class shootBall : MonoBehaviour
+public class leftWall : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public GameObject scoresObject;
+    public scores scoresScript;
+
     void Start()
     {
-        
+        scoresScript = scoresObject.GetComponentInChildren<scores>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         
@@ -18,6 +19,6 @@ public class shootBall : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        
+        scoresScript.addLeftPlayerScore(1);
     }
 }

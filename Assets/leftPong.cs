@@ -15,7 +15,6 @@ public class leftPong : MonoBehaviour
 
     void Update()
     {
-    
         if (Input.GetKey(KeyCode.W) && transform.position.y <= upWallPositionY)
         {
             transform.position += (Vector3.up * pongMoveSpeed) * Time.deltaTime;

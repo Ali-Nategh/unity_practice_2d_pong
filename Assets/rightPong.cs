@@ -15,7 +15,6 @@ public class rightPong : MonoBehaviour
 
     void Update()
     {
-
         if (Input.GetKey(KeyCode.UpArrow) && transform.position.y <= upWallPositionY)
         {
             transform.position += (Vector3.up * pongMoveSpeed) * Time.deltaTime;
@@ -25,6 +24,4 @@ public class rightPong : MonoBehaviour
             transform.position += (Vector3.down * pongMoveSpeed) * Time.deltaTime;
         }
     }
-
-
 }
